@@ -13,6 +13,5 @@ const routes = [
 ]
 
 export default new Router({
-  routes,
-  linkActiveClass: 'active'
+  routes
 })
