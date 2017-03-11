@@ -4,20 +4,20 @@
       <router-view></router-view>
     </div>
     <div class="tab">
-      <div class="tab-item">
-        <router-link to="/movie">
+      <div class="tab-item" @click="goMovie">
+        <router-link to="/movie" :class="{'active':active === 0}">
           <i class="iconfont">&#xe611;</i>
           <span class="text">电影</span>
         </router-link>
       </div>
-      <div class="tab-item">
-        <router-link to="/discovery">
+      <div class="tab-item" @click="goDiscovery">
+        <router-link to="/discovery" :class="{'active':active === 1}">
           <i class="iconfont">&#xe60e;</i>
           <span class="text">发现</span>
         </router-link>
       </div>
-      <div class="tab-item">
-        <router-link to="/user">
+      <div class="tab-item" @click="goUser">
+        <router-link to="/user" :class="{'active':active === 2}">
           <i class="iconfont">&#xe609;</i>
           <span class="text">我的</span>
         </router-link>
@@ -27,7 +27,26 @@
 </template>
 
 <script>
+const MOVIE = 0;
+const DISCOVERY = 1;
+const USER = 2;
 export default {
+  data() {
+    return {
+      active: MOVIE
+    }
+  },
+  methods: {
+    goMovie() {
+      this.active = MOVIE;
+    },
+    goDiscovery() {
+      this.active = DISCOVERY;
+    },
+    goUser() {
+      this.active = USER;
+    }
+  }
 }
 </script>
 
