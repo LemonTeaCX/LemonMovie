@@ -93,7 +93,9 @@ export default {
 <style lang="less" scoped>
 @import "../../common/less/index";
 .user {
+  width: 100%;
   background: #F5F5F5;
+  overflow: hidden;
   .header {
     width: 100%;
     height: 110px;
