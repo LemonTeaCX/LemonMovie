@@ -4,22 +4,10 @@
       <router-view></router-view>
     </div>
     <div class="tab">
-      <div class="tab-item" @click="goMovie">
-        <router-link to="/movie" :class="{'active':active === 0}">
-          <i class="iconfont">&#xe611;</i>
-          <span class="text">电影</span>
-        </router-link>
-      </div>
-      <div class="tab-item" @click="goDiscovery">
-        <router-link to="/discovery" :class="{'active':active === 1}">
-          <i class="iconfont">&#xe60e;</i>
-          <span class="text">发现</span>
-        </router-link>
-      </div>
-      <div class="tab-item" @click="goUser">
-        <router-link to="/user" :class="{'active':active === 2}">
-          <i class="iconfont">&#xe609;</i>
-          <span class="text">我的</span>
+      <div class="tab-item" @click="changeActive(index)" v-for="(item, index) in navItems">
+        <router-link :to="item.linkto" :class="{'active': item.active}">
+          <span class="iconfont" v-html="item.icon"></span>
+          <span class="text">{{item.text}}</span>
         </router-link>
       </div>
     </div>
@@ -27,24 +15,23 @@
 </template>
 
 <script>
-const MOVIE = 0;
-const DISCOVERY = 1;
-const USER = 2;
+let navItems = [
+  { text: '电影', linkto: '/movie', active: true, icon: '&#xe611;' },
+  { text: '发现', linkto: '/discovery', active: false, icon: '&#xe60e;' },
+  { text: '我的', linkto: '/user', active: false, icon: '&#xe609;' }
+]
 export default {
   data() {
     return {
-      active: MOVIE
+      navItems
     }
   },
   methods: {
-    goMovie() {
-      this.active = MOVIE;
-    },
-    goDiscovery() {
-      this.active = DISCOVERY;
-    },
-    goUser() {
-      this.active = USER;
+    changeActive(index) {
+      this.navItems.forEach(navItem => {
+        navItem.active = false;
+      })
+      this.navItems[index].active = true;
     }
   }
 }
@@ -72,7 +59,7 @@ export default {
       .iconfont {
         display: block;
         margin: 5px 0 3px;
-        font-size: 24px;
+        font-size: 20px;
       }
       .text {
         display: block;
