@@ -1,5 +1,6 @@
 <template>
   <div class="discovery">
+    <search></search>
     <div class="nav">
       <ul class="nav-box">
         <li class="nav-item" v-for="navItem in discovery.nav">
@@ -40,6 +41,8 @@
 </template>
 
 <script>
+import search from 'components/search/search'
+
 export default {
   data() {
     return {
@@ -50,11 +53,14 @@ export default {
     this.axios.get('/discovery/discovery').then(response => {
       if (response.statusText === 'OK') {
         this.discovery = response.data.data.data
-        console.log(this.discovery)
+        // console.log(this.discovery)
       }
     }).catch(error => {
       console.log(error)
     })
+  },
+  components: {
+    search
   }
 }
 </script>
