@@ -69,6 +69,7 @@ export default {
 .discovery {
   width: 100%;
   background: #f2f2f2;
+  overflow: hidden;
   .nav {
     width: 100%;
     height: 80px;
