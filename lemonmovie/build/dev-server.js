@@ -23,17 +23,24 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 // 数据接口
+var apiRoutes = express.Router();
+// movie模块
+var movie = require('../static/data/movie/movieHot.json');
+apiRoutes.get('/movie/movieHot', function (req, res) {
+  res.json({
+    data: movie
+  })
+})
+
 // discovery模块
 var discovery = require('../static/data/discovery/discovery.json');
-var apiRoutes = express.Router();
-
-apiRoutes.get('/discovery', function (req, res) {
+apiRoutes.get('/discovery/discovery', function (req, res) {
   res.json({
     data: discovery
   })
 })
 
-app.use('/discovery', apiRoutes);
+app.use(apiRoutes);
 
 var compiler = webpack(webpackConfig)
 
