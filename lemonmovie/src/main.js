@@ -20,4 +20,4 @@ new Vue({
   components: { App }
 }).$mount('#app')
 
-router.push('/movie')
+router.push('/movie/hot')
