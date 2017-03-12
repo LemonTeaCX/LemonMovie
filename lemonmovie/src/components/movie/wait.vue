@@ -5,7 +5,13 @@
 </template>
 
 <script>
-export default {}
+// import router from '../../router'
+export default {
+  created() {
+    console.log(2)
+    // this.$parent.$emit('cur-href', router.currentRoute.path)
+  }
+}
 </script>
 
 <style lang="less" scoped>
