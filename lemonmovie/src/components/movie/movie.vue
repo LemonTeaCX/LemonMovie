@@ -1,4 +1,5 @@
 <template>
+<!-- <transition name="slide-right"> -->
   <div class="movie">
     <div class="header">
       <div class="title">
@@ -14,39 +15,52 @@
       <search></search>
     </div>
     <div class="content">
-      <router-view></router-view>
+      <transition :name="slide">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
+<!-- </transition> -->
 </template>
 
 <script>
-// import router from '../../router'
+import router from '../../router'
 import search from 'components/search/search'
 let tabItems = [
-  { text: '热映', linkto: '/movie/hot', active: true },
-  { text: '待映', linkto: '/movie/wait', active: false },
-  { text: '找片', linkto: '/movie/find', active: false }
+  { text: '热映', name: 'hot', linkto: '/movie/hot', active: true },
+  { text: '待映', name: 'wait', linkto: '/movie/wait', active: false },
+  { text: '找片', name: 'find', linkto: '/movie/find', active: false }
 ]
 export default {
   created() {
-    // console.log(router.currentRoute)
-    // console.log(router)
-    // let lemon = '/movie/wait';
-    // router.push(lemon);
-    // console.log(0)
-    /* this.$on('cur-href', (curHref) => {
-      console.log('come in')
-      console.log(curHref)
-      router.push(curHref);
-    }) */
-    // this.$parent.$emit('cur-href', router.currentRoute.path)
-    // let curHref = this.myUrl;
-    // router.push(curHref);
-    console.log(this.$route)
+    let lastView = ''
+    this.tabItems.forEach(item => {
+      if (item.active) lastView = item.linkto;
+    })
+    router.push(lastView)
   },
   data() {
     return {
-      tabItems
+      tabItems,
+      slide: '',
+      myUrl: ''
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      let fromIndex = -1;
+      let toIndex = -1;
+      this.tabItems.forEach((item, index) => {
+        if (item.name === from.name) {
+          fromIndex = index;
+          return;
+        }
+        if (item.name === to.name) {
+          toIndex = index;
+          return;
+        }
+      })
+      this.slide = fromIndex < toIndex ? 'slide-left' : 'slide-right';
     }
   },
   components: {
@@ -65,6 +79,18 @@ export default {
 
 <style lang="less" scoped>
 @import "../../common/less/index";
+.slide-right-enter-active, {
+  transition: all .5s;
+}
+.slide-right-enter, {
+  transform: translateX(-100%);
+}
+.slide-left-enter-active {
+  transition: all .5s;
+}
+.slide-left-enter {
+  transform: translateX(100%);
+}
 .movie {
   width: 100%;
   overflow: hidden;
@@ -87,7 +113,7 @@ export default {
         height: 34px;
         margin: 15px auto 0;
         padding: 2px;
-        background: #77AD65;
+        background: @lmgreen-deep;
         border-radius: 5px;
         line-height: 34px;
         text-align: center;
@@ -97,6 +123,7 @@ export default {
           .tab-item {
             flex: 1;
             border-radius: 5px;
+            transition: all 0.3s;
             &.cur {
               background: #fff;
               a {
