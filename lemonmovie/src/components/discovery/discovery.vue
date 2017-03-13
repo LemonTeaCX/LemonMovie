@@ -1,4 +1,5 @@
 <template>
+<!-- <transition name="slide"> -->
   <div class="discovery">
     <search></search>
     <div class="nav">
@@ -38,6 +39,7 @@
       </div>
     </div>
   </div>
+<!-- </transition> -->
 </template>
 
 <script>
@@ -66,6 +68,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+// .slide-enter-active, .slide-leave-active {
+//   transition: all .5s
+// }
+// .slide-enter, .slide-leave-active {
+//   transform: translateX(100%);
+// }
 .discovery {
   width: 100%;
   background: #f2f2f2;

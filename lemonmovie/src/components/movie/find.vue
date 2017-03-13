@@ -5,15 +5,17 @@
 </template>
 
 <script>
-// import router from '../../router'
 export default {
   created() {
-    console.log(3)
-    // this.$parent.$emit('cur-href', router.currentRoute.path)
   }
 }
 </script>
 
 <style lang="less" scoped>
-
+.find {
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  background: tomato;
+}
 </style>

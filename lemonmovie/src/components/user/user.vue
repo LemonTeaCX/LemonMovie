@@ -1,9 +1,14 @@
 <template>
+<!-- <transition name="slide-left"> -->
   <div class="user">
     <div class="header">
-      <span class="icon"></span>
-      <span class="login-text">立即登录</span>
-      <span class="login-arr"><i class="iconfont">&#xe62d;</i></span>
+      <div class="icon-wrapper">
+        <span class="icon"></span>
+      </div>
+      <router-link to="login" class="login-now">
+        <span class="login-text">立即登录</span>
+        <span class="login-arr"><i class="iconfont">&#xe62d;</i></span>
+      </router-link>
     </div>
     <div class="nav">
       <ul class="nav-tab">
@@ -79,6 +84,7 @@
       </ul>
     </div>
   </div>
+<!-- </transition> -->
 </template>
 
 <script>
@@ -92,6 +98,12 @@ export default {
 
 <style lang="less" scoped>
 @import "../../common/less/index";
+// .slide-left-enter-active, .slide-left-leave-active {
+//   transition: all .5s
+// }
+// .slide-left-enter, .slide-left-leave-active {
+//   transform: translateX(100%);
+// }
 .user {
   width: 100%;
   background: #F5F5F5;
@@ -103,25 +115,36 @@ export default {
     color: #fff;
     line-height: 110px;
     position: relative;
-    .icon {
-      width: 70px;
-      height: 70px;
-      float: left;
-      margin: 20px 30px;
-      border-radius: 50%;
-      background: #fff;
+    display: flex;
+    .icon-wrapper {
+      flex: 0 0 100px;
+      .icon {
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin: 20px 0 20px 30px;
+        border-radius: 50%;
+        background: #fff;
+      }
     }
-    .login-text {
-      float: left;
+    .login-now {
+      flex: 1;
       height: 110px;
-      font-size: 20px;
-      font-family: '宋体';
-    }
-    .login-arr {
-      position: absolute;
-      right: 30px;
-      height: 110px;
-      font-size: 20px;
+      padding-left: 30px;
+      .login-text {
+        float: left;
+        height: 110px;
+        font-size: 20px;
+        font-family: '宋体';
+        color: #fff;
+      }
+      .login-arr {
+        position: absolute;
+        right: 30px;
+        height: 110px;
+        font-size: 20px;
+        color: #fff;
+      }
     }
   }
   .nav {
