@@ -25,10 +25,16 @@ var app = express()
 // 数据接口
 var apiRoutes = express.Router();
 // movie模块
-var movie = require('../static/data/movie/movieHot.json');
+var movieHot = require('../static/data/movie/movieHot.json');
 apiRoutes.get('/movie/movieHot', function (req, res) {
   res.json({
-    data: movie
+    data: movieHot
+  })
+})
+var movieFind = require('../static/data/movie/movieFind.json');
+apiRoutes.get('/movie/movieFind', function (req, res) {
+  res.json({
+    data: movieFind
   })
 })
 

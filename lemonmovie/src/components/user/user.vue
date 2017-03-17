@@ -1,5 +1,4 @@
 <template>
-<!-- <transition name="slide-left"> -->
   <div class="user">
     <div class="header">
       <div class="icon-wrapper">
@@ -84,7 +83,6 @@
       </ul>
     </div>
   </div>
-<!-- </transition> -->
 </template>
 
 <script>
@@ -98,12 +96,6 @@ export default {
 
 <style lang="less" scoped>
 @import "../../common/less/index";
-// .slide-left-enter-active, .slide-left-leave-active {
-//   transition: all .5s
-// }
-// .slide-left-enter, .slide-left-leave-active {
-//   transform: translateX(100%);
-// }
 .user {
   width: 100%;
   background: #F5F5F5;

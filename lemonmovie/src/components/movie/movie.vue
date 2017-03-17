@@ -1,5 +1,4 @@
 <template>
-<!-- <transition name="slide-right"> -->
   <div class="movie">
     <div class="header">
       <div class="title">
@@ -20,7 +19,6 @@
       </transition>
     </div>
   </div>
-<!-- </transition> -->
 </template>
 
 <script>
@@ -97,11 +95,15 @@ export default {
   .header {
     width: 100%;
     background: @lmgreen;
+    padding-top: 60px;
     .title {
       width: 100%;
       height: 60px;
+      background: @lmgreen;
       color: #fff;
-      position: relative;
+      position: fixed;
+      top: 0;
+      z-index: 100;
       overflow: hidden;
       .city {
         position: absolute;

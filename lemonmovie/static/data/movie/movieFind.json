@@ -1,0 +1,405 @@
+{
+  "classList": [
+    {
+      "tagList": [
+        {
+          "tagName": "爱情",
+          "tagId": 3
+        },
+        {
+          "tagName": "喜剧",
+          "tagId": 2
+        },
+        {
+          "tagName": "动画",
+          "tagId": 4
+        },
+        {
+          "tagName": "剧情",
+          "tagId": 1
+        },
+        {
+          "tagName": "恐怖",
+          "tagId": 6
+        },
+        {
+          "tagName": "惊悚",
+          "tagId": 7
+        },
+        {
+          "tagName": "科幻",
+          "tagId": 10
+        },
+        {
+          "tagName": "动作",
+          "tagId": 5
+        },
+        {
+          "tagName": "悬疑",
+          "tagId": 8
+        },
+        {
+          "tagName": "犯罪",
+          "tagId": 11
+        },
+        {
+          "tagName": "冒险",
+          "tagId": 9
+        },
+        {
+          "tagName": "战争",
+          "tagId": 12
+        },
+        {
+          "tagName": "奇幻",
+          "tagId": 14
+        },
+        {
+          "tagName": "运动",
+          "tagId": 15
+        },
+        {
+          "tagName": "家庭",
+          "tagId": 16
+        },
+        {
+          "tagName": "古装",
+          "tagId": 17
+        },
+        {
+          "tagName": "武侠",
+          "tagId": 18
+        },
+        {
+          "tagName": "西部",
+          "tagId": 19
+        },
+        {
+          "tagName": "历史",
+          "tagId": 20
+        },
+        {
+          "tagName": "传记",
+          "tagId": 21
+        },
+        {
+          "tagName": "情色",
+          "tagId": 22
+        },
+        {
+          "tagName": "歌舞",
+          "tagId": 23
+        },
+        {
+          "tagName": "黑色电影",
+          "tagId": 24
+        },
+        {
+          "tagName": "短片",
+          "tagId": 25
+        },
+        {
+          "tagName": "纪录片",
+          "tagId": 13
+        },
+        {
+          "tagName": "其他",
+          "tagId": 100
+        }
+      ],
+      "tagTypeName": "类型"
+    },
+    {
+      "tagList": [
+        {
+          "tagName": "大陆",
+          "tagId": 2
+        },
+        {
+          "tagName": "美国",
+          "tagId": 3
+        },
+        {
+          "tagName": "韩国",
+          "tagId": 7
+        },
+        {
+          "tagName": "日本",
+          "tagId": 6
+        },
+        {
+          "tagName": "中国香港",
+          "tagId": 10
+        },
+        {
+          "tagName": "中国台湾",
+          "tagId": 13
+        },
+        {
+          "tagName": "泰国",
+          "tagId": 9
+        },
+        {
+          "tagName": "印度",
+          "tagId": 8
+        },
+        {
+          "tagName": "法国",
+          "tagId": 4
+        },
+        {
+          "tagName": "英国",
+          "tagId": 5
+        },
+        {
+          "tagName": "俄罗斯",
+          "tagId": 14
+        },
+        {
+          "tagName": "意大利",
+          "tagId": 16
+        },
+        {
+          "tagName": "西班牙",
+          "tagId": 17
+        },
+        {
+          "tagName": "德国",
+          "tagId": 11
+        },
+        {
+          "tagName": "波兰",
+          "tagId": 19
+        },
+        {
+          "tagName": "澳大利亚",
+          "tagId": 20
+        },
+        {
+          "tagName": "伊朗",
+          "tagId": 21
+        },
+        {
+          "tagName": "其他",
+          "tagId": 100
+        }
+      ],
+      "tagTypeName": "地区"
+    },
+    {
+      "tagList": [
+        {
+          "tagName": "2017以后",
+          "tagId": 13
+        },
+        {
+          "tagName": "2017",
+          "tagId": 12
+        },
+        {
+          "tagName": "2016",
+          "tagId": 11
+        },
+        {
+          "tagName": "2015",
+          "tagId": 10
+        },
+        {
+          "tagName": "2014",
+          "tagId": 9
+        },
+        {
+          "tagName": "2013",
+          "tagId": 8
+        },
+        {
+          "tagName": "2012",
+          "tagId": 7
+        },
+        {
+          "tagName": "2011",
+          "tagId": 6
+        },
+        {
+          "tagName": "2000-2010",
+          "tagId": 5
+        },
+        {
+          "tagName": "90年代",
+          "tagId": 4
+        },
+        {
+          "tagName": "80年代",
+          "tagId": 3
+        },
+        {
+          "tagName": "70年代",
+          "tagId": 2
+        },
+        {
+          "tagName": "更早",
+          "tagId": 1
+        }
+      ],
+      "tagTypeName": "年代"
+    }
+  ],
+  "boardBox": [
+    {
+      "boardId": 7,
+      "boardName": "热映口碑",
+      "movieId": 342858,
+      "movieImgs": [
+        "http://p1.meituan.net/w.h/movie/0ec2ddc2bed2bad93017aacc473be337387115.jpg",
+        "http://p0.meituan.net/w.h/movie/2fed2c127078fcca08b075736bf7b69e454069.jpg"
+      ],
+      "movieName": "一条狗的使命",
+      "url": "meituanmovie://www.meituan.com/movieBoard/detail?id=7&boardType=7&title=热映口碑榜单"
+    },
+    {
+      "boardId": 6,
+      "boardName": "最受期待",
+      "movieId": 248700,
+      "movieImgs": [
+        "http://p1.meituan.net/w.h/movie/af297f59e363ce96290dfea22f6fea0c153020.jpg",
+        "http://p1.meituan.net/w.h/movie/acf88770d5b1d548bf8732b0691600a9697009.jpg"
+      ],
+      "movieName": "速度与激情8",
+      "url": "meituanmovie://www.meituan.com/movieBoard/detail?id=6&boardType=6&title=最受期待榜单"
+    },
+    {
+      "boardId": 9,
+      "boardName": "海外电影",
+      "movieId": 249898,
+      "movieImgs": [
+        "http://p0.meituan.net/w.h/movie/7bba601685691f8d7c2bf07a1d5af2f6155618.jpg",
+        "http://p1.meituan.net/w.h/movie/0b7cc256954866593a8e79009acade71487726.jpg"
+      ],
+      "movieName": "金刚：骷髅岛",
+      "url": "meituanmovie://www.meituan.com/overseas/detail?tab=0&title=海外电影榜单"
+    },
+    {
+      "boardId": 4,
+      "boardName": "TOP100",
+      "movieId": 1203,
+      "movieImgs": [
+        "http://p1.meituan.net/w.h/movie/20803f59291c47e1e116c11963ce019e68711.jpg",
+        "http://p0.meituan.net/w.h/movie/__40191813__4767047.jpg"
+      ],
+      "movieName": "霸王别姬",
+      "url": "meituanmovie://www.meituan.com/movieBoard/detail?id=4&boardType=1&title=TOP100榜单"
+    }
+  ],
+  "festivalBox": [
+    {
+      "festSessionId": 4076,
+      "festivalId": 112,
+      "festivalName": "香港金像奖",
+      "heldDate": "2017-04-09",
+      "img": "http://p1.meituan.net/w.h/movie/3e2246f094d7ab7dd57a0188bd025898163008.jpg",
+      "movieId": 341120,
+      "movieName": "七月与安生",
+      "prizeName": "最佳影片(提名)",
+      "sessionNum": 36
+    },
+    {
+      "festSessionId": 4071,
+      "festivalId": 105,
+      "festivalName": "日本电影学院奖",
+      "heldDate": "2017-03-02",
+      "img": "http://p1.meituan.net/w.h/movie/8bca340d154d6b318f9e81b618bc3203167158.jpg",
+      "movieId": 342249,
+      "movieName": "怒",
+      "prizeName": "最佳影片(提名)",
+      "sessionNum": 40
+    },
+    {
+      "festSessionId": 3957,
+      "festivalId": 117,
+      "festivalName": "奥斯卡金像奖",
+      "heldDate": "2017-02-26",
+      "img": "http://p0.meituan.net/w.h/movie/a6ec7959eacd2e027d3a0f6d200a55df191663.jpg",
+      "movieId": 343789,
+      "movieName": "月光男孩",
+      "prizeName": "最佳影片",
+      "sessionNum": 89
+    },
+    {
+      "festSessionId": 4083,
+      "festivalId": 102,
+      "festivalName": "法国电影凯撒奖",
+      "heldDate": "2017-02-24",
+      "img": "http://p1.meituan.net/w.h/movie/5287354626e5dbc991753599fb09ba7e90753.jpg",
+      "movieId": 337359,
+      "movieName": "她",
+      "prizeName": "最佳影片",
+      "sessionNum": 42
+    },
+    {
+      "festSessionId": 4069,
+      "festivalId": 107,
+      "festivalName": "英国电影和电视艺术学院奖",
+      "heldDate": "2017-02-12",
+      "img": "http://p0.meituan.net/w.h/movie/968965a2dde3d27a192b6e6881fff9d8119572.jpeg",
+      "movieId": 338436,
+      "movieName": "爱乐之城",
+      "prizeName": "最佳影片",
+      "sessionNum": 70
+    },
+    {
+      "festSessionId": 4073,
+      "festivalId": 114,
+      "festivalName": "柏林国际电影节",
+      "heldDate": "2017-02-09",
+      "img": "http://p0.meituan.net/w.h/movie/2c886fe9e09ce3a1f6375bd0ba011ddd106011.jpg",
+      "movieId": 1200388,
+      "movieName": "肉与灵",
+      "prizeName": "金熊奖-最佳影片",
+      "sessionNum": 67
+    },
+    {
+      "festSessionId": 4078,
+      "festivalId": 100,
+      "festivalName": "安妮奖",
+      "heldDate": "2017-02-04",
+      "img": "http://p0.meituan.net/w.h/movie/6d6bca10ffdf422d20c89763fcfb2617179503.jpg",
+      "movieId": 246286,
+      "movieName": "疯狂动物城",
+      "prizeName": "最佳动画长片",
+      "sessionNum": 44
+    },
+    {
+      "festSessionId": 4074,
+      "festivalId": 103,
+      "festivalName": "圣丹斯电影节",
+      "heldDate": "2017-01-19",
+      "img": "http://p1.meituan.net/w.h/movie/3541856c8eb742307d51798659f75802133406.jpg",
+      "movieId": 882888,
+      "movieName": "无处为家",
+      "prizeName": "评审团大奖-美国剧情片",
+      "sessionNum": 34
+    },
+    {
+      "festSessionId": 4063,
+      "festivalId": 113,
+      "festivalName": "金球奖",
+      "heldDate": "2017-01-08",
+      "img": "http://p0.meituan.net/w.h/movie/a6ec7959eacd2e027d3a0f6d200a55df191663.jpg",
+      "movieId": 343789,
+      "movieName": "月光男孩",
+      "prizeName": "最佳剧情电影",
+      "sessionNum": 74
+    },
+    {
+      "festSessionId": 3510,
+      "festivalId": 108,
+      "festivalName": "欧洲电影奖",
+      "heldDate": "2016-12-10",
+      "img": "http://p0.meituan.net/w.h/movie/c535cc13caed6b6bfffa32b4705de70c134010.jpg",
+      "movieId": 346577,
+      "movieName": "托尼·厄德曼",
+      "prizeName": "最佳影片",
+      "sessionNum": 29
+    }
+  ]
+}
