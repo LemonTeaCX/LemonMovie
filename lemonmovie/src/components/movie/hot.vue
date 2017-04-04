@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import movieItem from 'components/movie/movieItem.vue'
+import movieItem from 'components/movie/movieItem'
 export default {
   data() {
     return {

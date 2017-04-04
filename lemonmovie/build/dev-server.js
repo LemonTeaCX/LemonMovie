@@ -31,6 +31,12 @@ apiRoutes.get('/movie/movieHot', function (req, res) {
     data: movieHot
   })
 })
+var movieWait = require('../static/data/movie/movieWait.json');
+apiRoutes.get('/movie/movieWait', function (req, res) {
+  res.json({
+    data: movieWait
+  })
+})
 var movieFind = require('../static/data/movie/movieFind.json');
 apiRoutes.get('/movie/movieFind', function (req, res) {
   res.json({

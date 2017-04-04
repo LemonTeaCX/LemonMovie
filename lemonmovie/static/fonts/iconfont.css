@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1489044144836'); /* IE9*/
-  src: url('iconfont.eot?t=1489044144836#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1489044144836') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1489044144836') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1489044144836#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1491301571976'); /* IE9*/
+  src: url('iconfont.eot?t=1491301571976#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1491301571976') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1491301571976') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1491301571976#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -14,6 +14,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-bofang:before { content: "\f0013"; }
 
 .icon-dianying:before { content: "\e611"; }
 
