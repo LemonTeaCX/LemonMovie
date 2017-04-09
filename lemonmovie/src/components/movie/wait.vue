@@ -11,11 +11,15 @@
     <div class="expect">
       <h3>近期最受期待</h3>
       <div class="expect-list">
-        <div class="expect-box">
-          <div class="expect-box" v-for="expectItem in movieWait.expect">
-            <expect-box :expectData="expectItem"></expect-box>
-          </div>
+        <div class="expect-box" v-for="expectItem in movieWait.expect">
+          <expect-box :expectData="expectItem"></expect-box>
         </div>
+      </div>
+    </div>
+    <div class="movies" v-for="moviesItem in movieWait.movies">
+      <h3>{{moviesItem.comingTitle}}</h3>
+      <div class="movies-list">
+        
       </div>
     </div>
   </div>
@@ -73,6 +77,24 @@ export default {
         display: inline-block;
         width: 40%;
         height: 85px;
+        margin-left: 10px;
+        overflow: hidden;
+      }
+    }
+  }
+  .expect {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    .expect-list {
+      padding: 12px 0 17px 8px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap; 
+      .expect-box {
+        display: inline-block;
+        width: 24%;
+        height: 180px;
         margin-left: 10px;
         overflow: hidden;
       }
