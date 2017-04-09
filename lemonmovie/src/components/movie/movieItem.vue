@@ -1,25 +1,25 @@
 <template>
   <div class="movie-item">
     <div class="item-img">
-      <img class="hot-img" :src="hotInfo.img">
+      <img class="hot-img" :src="movieInfo.img">
     </div>
     <div class="item-info">
-      <div class="title">{{hotInfo.nm}}</div>
+      <div class="title">{{movieInfo.nm}}</div>
       <div class="popular">
-        <div v-if="hotInfo.mk">观众<span class="num">{{hotInfo.mk}}</span></div>
-        <div v-else><span class="num">{{hotInfo.wish}}</span>人想看</div>
+        <div v-if="movieInfo.mk">观众<span class="num">{{movieInfo.mk}}</span></div>
+        <div v-else><span class="num">{{movieInfo.wish}}</span>人想看</div>
       </div>
-      <div class="scm">{{hotInfo.scm}}</div>
-      <div class="show-info">{{hotInfo.showInfo}}</div>
+      <div class="scm">{{movieInfo.scm}}</div>
+      <div class="show-info">{{movieInfo.showInfo}}</div>
     </div>
-    <div class="item-buy" :class="{'pre-sale': !hotInfo.mk}">{{hotInfo.mk ? '购票' : '预售'}}</div>
+    <div class="item-buy" :class="{'pre-sale': !movieInfo.mk}">{{movieInfo.mk ? '购票' : '预售'}}</div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    hotInfo: {
+    movieInfo: {
       type: Object,
       default() {
         return {}

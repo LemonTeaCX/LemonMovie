@@ -3,7 +3,7 @@
     <div class="movie">
       <ul class="movie-list">
         <li class="movie-item" v-for="hotItem in movieHot.hot">
-          <movie-item :hotInfo="hotItem"></movie-item>
+          <movie-item :movieInfo="hotItem"></movie-item>
         </li>
       </ul>
     </div>

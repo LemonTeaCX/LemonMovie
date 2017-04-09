@@ -16,10 +16,10 @@
         </div>
       </div>
     </div>
-    <div class="movies" v-for="moviesItem in movieWait.movies">
-      <h3>{{moviesItem.comingTitle}}</h3>
+    <div class="movies" v-for="(movieItem, index) in movieWait.movies">
+      <h3 v-if="getMovieIndex.indexOf(index) !== -1">{{movieItem.comingTitle}}</h3>
       <div class="movies-list">
-        
+        <movie-item :movieInfo="movieItem"></movie-item>
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@
 <script>
 import preBox from 'components/preBox/preBox'
 import expectBox from 'components/expectBox/expectBox'
+import movieItem from 'components/movie/movieItem'
 export default {
   created() {
     this.axios.get('/movie/movieWait').then(response => {
@@ -41,11 +42,25 @@ export default {
   },
   components: {
     'pre-box': preBox,
-    'expect-box': expectBox
+    'expect-box': expectBox,
+    'movie-item': movieItem
   },
   data() {
     return {
       movieWait: {}
+    }
+  },
+  computed: {
+    getMovieIndex() {
+      let indexs = [];
+      let obj = {};
+      this.movieWait.movies.forEach(function (e, i) {
+        if (!obj[e.comingTitle]) {
+          obj[e.comingTitle] = true;
+          indexs.push(i);
+        }
+      });
+      return indexs;
     }
   }
 }
