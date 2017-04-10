@@ -1,6 +1,6 @@
 <template>
   <div class="discovery">
-    <search></search>
+    <search class="search"></search>
     <div class="nav">
       <ul class="nav-box">
         <li class="nav-item" v-for="navItem in discovery.nav">
@@ -68,8 +68,14 @@ export default {
 <style lang="less" scoped>
 .discovery {
   width: 100%;
+  padding-top: 50px;
   background: #f2f2f2;
   overflow: hidden;
+  .search {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
   .nav {
     width: 100%;
     height: 80px;

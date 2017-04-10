@@ -4,10 +4,10 @@
       <div class="icon-wrapper">
         <span class="icon"></span>
       </div>
-      <router-link to="login" class="login-now">
+      <div class="login-now" @click="login">
         <span class="login-text">立即登录</span>
         <span class="login-arr"><i class="iconfont">&#xe62d;</i></span>
-      </router-link>
+      </div>
     </div>
     <div class="nav">
       <ul class="nav-tab">
@@ -87,9 +87,15 @@
 
 <script>
 import listitem from 'components/listitem/listitem'
+import router from '../../router'
 export default {
   components: {
     'list-item': listitem
+  },
+  methods: {
+    login() {
+      router.push('/user/login');
+    }
   }
 }
 </script>

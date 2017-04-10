@@ -11,7 +11,5 @@ export default {
 
 <style lang="less" scoped>
 .login {
-  width: 100%;
-  overflow: hidden;
 }
 </style>

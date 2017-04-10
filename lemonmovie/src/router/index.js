@@ -12,9 +12,7 @@ import discovery from 'components/discovery/discovery'
 
 // user模块
 import user from 'components/user/user'
-
-// login模块
-import login from 'components/login/login'
+import login from 'components/user/login'
 
 Vue.use(Router)
 
@@ -30,8 +28,14 @@ const routes = [
     ]
   },
   { path: '/discovery', component: discovery, name: 'discovery' },
-  { path: '/user', component: user, name: 'user' },
-  { path: '/login', component: login, name: 'login' }
+  {
+    path: '/user',
+    component: user,
+    name: 'user',
+    children: [
+      { path: 'login', component: login, name: 'login' }
+    ]
+  }
 ]
 
 export default new Router({
