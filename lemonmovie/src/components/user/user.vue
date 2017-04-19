@@ -1,12 +1,15 @@
 <template>
   <div class="user">
+    <router-view></router-view>
     <div class="header">
       <div class="icon-wrapper">
         <span class="icon"></span>
       </div>
-      <div class="login-now" @click="login">
-        <span class="login-text">立即登录</span>
-        <span class="login-arr"><i class="iconfont">&#xe62d;</i></span>
+      <div class="login-now">
+        <router-link to="/user/login">
+          <span class="login-text">立即登录</span>
+          <span class="login-arr"><i class="iconfont">&#xe62d;</i></span>
+        </router-link>
       </div>
     </div>
     <div class="nav">
@@ -87,15 +90,9 @@
 
 <script>
 import listitem from 'components/listitem/listitem'
-import router from '../../router'
 export default {
   components: {
     'list-item': listitem
-  },
-  methods: {
-    login() {
-      router.push('/user/login');
-    }
   }
 }
 </script>
