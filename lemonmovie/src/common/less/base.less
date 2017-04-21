@@ -8,12 +8,27 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-.login-poa(@w, @h) {
+.login-poa(@width, @height) {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: @w;
-    height: @h;
-    margin-left: -(@w / 2);
-    margin-top: -(@h / 2);
+    width: @width;
+    height: @height;
+    margin-left: -(@width / 2);
+    margin-top: -(@height / 2);
+}
+
+.placeholder-color(@color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color: @color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @color;
+  }
+  /* &::-moz-placeholder { Mozilla Firefox 19+
+  　color: @color;
+  }
+  &:-ms-input-placeholder { Internet Explorer 10+
+  　color: @color;
+  } */
 }

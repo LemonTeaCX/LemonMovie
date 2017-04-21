@@ -6,7 +6,7 @@
         <span class="icon"></span>
       </div>
       <div class="login-now">
-        <router-link to="/user/login">
+        <router-link to="/user/login" class="login-now-a">
           <span class="login-text">立即登录</span>
           <span class="login-arr"><i class="iconfont">&#xe62d;</i></span>
         </router-link>
@@ -126,6 +126,11 @@ export default {
       flex: 1;
       height: 110px;
       padding-left: 30px;
+      .login-now-a {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
       .login-text {
         float: left;
         height: 110px;

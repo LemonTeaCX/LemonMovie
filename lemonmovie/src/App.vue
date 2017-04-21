@@ -59,10 +59,10 @@ export default {
 
 <style lang="less" scoped>
 @import "./common/less/index";
-.slide-right-enter-active, {
+.slide-right-enter-active {
   transition: all .5s;
 }
-.slide-right-enter, {
+.slide-right-enter {
   transform: translateX(-100%);
 }
 .slide-left-enter-active {
@@ -71,6 +71,12 @@ export default {
 .slide-left-enter {
   transform: translateX(100%);
 }
+/* .slide-left-leave-active {
+  transition: all .5s;
+  transform: translateX(-100%);
+}
+.slide-left-leave {
+} */
 #app {
   .content {
     padding-bottom: 50px;
