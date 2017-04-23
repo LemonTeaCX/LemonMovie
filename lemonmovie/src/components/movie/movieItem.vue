@@ -1,4 +1,5 @@
 <template>
+<router-link :to="{name:'movieDetail', query:movieInfo.id}" class="movie-detail">
   <div class="movie-item">
     <div class="item-img">
       <img class="hot-img" :src="movieInfo.img">
@@ -14,6 +15,7 @@
     </div>
     <div class="item-buy" :class="{'pre-sale': !movieInfo.mk}">{{movieInfo.mk ? '购票' : '预售'}}</div>
   </div>
+</router-link>
 </template>
 
 <script>

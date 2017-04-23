@@ -17,6 +17,9 @@
       <transition :name="slide">
         <router-view></router-view>
       </transition>
+      <transition name="fade">
+        <router-view name="movieDetail"></router-view>
+      </transition>
     </div>
   </div>
 </template>
@@ -40,8 +43,7 @@ export default {
   data() {
     return {
       tabItems,
-      slide: '',
-      myUrl: ''
+      slide: ''
     }
   },
   watch: {
@@ -88,6 +90,13 @@ export default {
 }
 .slide-left-enter {
   transform: translateX(100%);
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+  transform: scale(1.2,1.2);
 }
 .movie {
   width: 100%;

@@ -14,6 +14,9 @@ import discovery from 'components/discovery/discovery'
 import user from 'components/user/user'
 import login from 'components/user/login'
 
+// movieItem模块
+import movieDetail from 'components/movie/movieDetail'
+
 Vue.use(Router)
 
 const routes = [
@@ -22,9 +25,10 @@ const routes = [
     component: movie,
     name: 'movie',
     children: [
-      { path: 'hot', name: 'hot', component: hot },
-      { path: 'wait', name: 'wait', component: wait },
-      { path: 'find', name: 'find', component: find }
+      { path: 'hot', component: hot, name: 'hot' },
+      { path: 'wait', component: wait, name: 'wait' },
+      { path: 'find', component: find, name: 'find' },
+      { path: 'movieDetail', name: 'movieDetail', components: {movieDetail: movieDetail} }
     ]
   },
   { path: '/discovery', component: discovery, name: 'discovery' },
