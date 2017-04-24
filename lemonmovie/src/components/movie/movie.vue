@@ -96,7 +96,7 @@ export default {
 }
 .fade-enter, .fade-leave-active {
   opacity: 0;
-  transform: scale(1.2,1.2);
+  transform: scale(0.8,0.8);
 }
 .movie {
   width: 100%;
