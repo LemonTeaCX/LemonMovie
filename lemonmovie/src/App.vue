@@ -4,6 +4,9 @@
       <transition :name="slide">
         <router-view></router-view>
       </transition>
+      <transition name="fade">
+        <router-view name="searchResult"></router-view>
+      </transition>
     </div>
     <div class="tab">
       <div class="tab-item" @click="changeActive(index)" v-for="(item, index) in navItems" :class="{'active': item.active}">
@@ -70,6 +73,13 @@ export default {
 }
 .slide-left-enter {
   transform: translateX(100%);
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+  transform: scale(0.8,0.8);
 }
 /* .slide-left-leave-active {
   transition: all .5s;

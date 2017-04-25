@@ -3,7 +3,9 @@
     <router-view></router-view>
     <div class="header">
       <div class="icon-wrapper">
-        <span class="icon"></span>
+        <span class="icon">
+          <img src="./images/logo.jpg" height="600" width="700" alt="">
+        </span>
       </div>
       <div class="login-now">
         <router-link to="/user/login" class="login-now-a">
@@ -120,6 +122,11 @@ export default {
         margin: 20px 0 20px 30px;
         border-radius: 50%;
         background: #fff;
+        overflow: hidden;
+        img {
+          width: 60px;
+          height: auto;
+        }
       }
     }
     .login-now {

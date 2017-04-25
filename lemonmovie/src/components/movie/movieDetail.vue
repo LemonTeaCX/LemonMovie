@@ -3,7 +3,7 @@
     <div class="detail-header" :class="{'showTitle': showTitle}">
       <div class="detail-header-back" @click="back"><i class="iconfont">&#xe746;</i></div>
       <div class="detail-header-title">{{showTitle ? movieDetail.MovieDetailModel.nm : ''}}</div>
-      <div class="detail-header-share"><i class="iconfont">&#xf000b;</i></div>
+      <div class="detail-header-share" @click="share"><i class="iconfont">&#xf000b;</i></div>
     </div>
     <div class="detail-con-bg">
       <div class="detail-con-bgIn" :style="{ backgroundImage: 'url('+movieDetail.MovieDetailModel.img+')' }"></div>
@@ -50,20 +50,23 @@
         </div>
       </div>
     </div>
-    <div class="detail-buy">
+    <div class="detail-buy" @click="buy">
       立即购票
     </div>
+    <modal v-if="isWait" :text="'敬请期待......'"></modal>
   </div>
 </template>
 
 <script>
 import commentBox from 'components/commentBox/commentBox'
+import modal from 'components/modal/modal'
 export default {
   data() {
     return {
       movieDetail: {},
       showMoreIntroduce: false,
-      showTitle: false
+      showTitle: false,
+      isWait: false
     }
   },
   created() {
@@ -101,10 +104,23 @@ export default {
       } else {
         this.showTitle = false;
       }
+    },
+    wait() {
+      this.isWait = true;
+      setTimeout(() => {
+        this.isWait = false;
+      }, 2000);
+    },
+    buy () {
+      this.wait();
+    },
+    share () {
+      this.wait();
     }
   },
   components: {
-    'comment-box': commentBox
+    'comment-box': commentBox,
+    modal
   }
 }
 </script>

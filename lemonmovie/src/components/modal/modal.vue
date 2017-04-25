@@ -3,7 +3,7 @@
     <div class="modal" v-if="!onTime">
       <div class="modal-con">
         <div class="modal-text">{{text}}</div>
-        <div class="modal-icon"><i class="iconfont">&#xe64a;</i></div>
+        <div class="modal-icon"><i class="iconfont">&#xe64d;</i></div>
       </div>
     </div>
   </transition>
@@ -58,10 +58,10 @@ export default {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    line-height: 60px;
+    line-height: 50px;
     .modal-icon {
       .iconfont {
-        font-size: 24px;
+        font-size: 40px;
       }
     }
   }

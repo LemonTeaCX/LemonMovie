@@ -6,6 +6,7 @@ import movie from 'components/movie/movie'
 import hot from 'components/movie/hot'
 import wait from 'components/movie/wait'
 import find from 'components/movie/find'
+import movieDetail from 'components/movie/movieDetail'
 
 // discovery模块
 import discovery from 'components/discovery/discovery'
@@ -14,8 +15,8 @@ import discovery from 'components/discovery/discovery'
 import user from 'components/user/user'
 import login from 'components/user/login'
 
-// movieItem模块
-import movieDetail from 'components/movie/movieDetail'
+// search模块
+import searchResult from 'components/search/searchResult'
 
 Vue.use(Router)
 
@@ -39,7 +40,8 @@ const routes = [
     children: [
       { path: 'login', component: login, name: 'login' }
     ]
-  }
+  },
+  { path: '/searchResult', components: {searchResult: searchResult}, name: 'searchResult' }
 ]
 
 export default new Router({

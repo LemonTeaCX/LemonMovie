@@ -1,14 +1,30 @@
 <template>
   <div class="search-wrapper">
-    <a class="search" href="javascript:;">
+    <router-link v-if="!canInput" :to="{name:'searchResult'}" class="search" :class="{'textLeft': textAlign === 'left'}">
       <i class="iconfont">&#xe60e;</i>
       <span class="text">找影视剧、影人、影院</span>
-    </a>
+    </router-link>
+    <input v-if="canInput" type="text" placeholder="找影视剧、影人、影院" class="search" :class="{'textLeft': textAlign === 'left'}">
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    textAlign: {
+      type: String,
+      default() {
+        return 'center'
+      }
+    },
+    canInput: {
+      type: Boolean,
+      default() {
+        return false
+      }
+    }
+  }
+}
 </script>
 
 <style lang="less" scoped>
@@ -30,6 +46,14 @@ export default {}
     font-size: 14px;
     color: #ADADAD;
     text-align: center;
+    .placeholder-color(#ADADAD);
+    &.textLeft {
+      text-align: left;
+      padding-left: 15px;
+    }
+  }
+  input {
+    outline: none;
   }
 }
 </style>
