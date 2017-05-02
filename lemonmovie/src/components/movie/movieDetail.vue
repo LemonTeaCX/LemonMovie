@@ -111,10 +111,10 @@ export default {
         this.isWait = false;
       }, 2000);
     },
-    buy () {
+    buy() {
       this.wait();
     },
-    share () {
+    share() {
       this.wait();
     }
   },

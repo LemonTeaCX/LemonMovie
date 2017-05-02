@@ -1,11 +1,8 @@
 <template>
   <div class="hot">
-    <div class="loading" v-if="!isLoaded">     
-      <loading></loading>
-    </div>
-    <div class="movie" v-if="isLoaded">
+    <div class="movie">
       <ul class="movie-list">
-        <li class="movie-item" v-for="hotItem in movieHot">
+        <li class="movie-item" v-for="hotItem in movieHot.hot">
           <movie-item :movieInfo="hotItem"></movie-item>
         </li>
       </ul>
@@ -15,25 +12,24 @@
 
 <script>
 import movieItem from 'components/movie/movieItem'
-import loading from 'components/loading/loading'
 export default {
   data() {
     return {
-      movieHot: {},
-      isLoaded: false
+      movieHot: {}
+      // isLoaded: false
     }
   },
   created() {
-    // this.axios.get('/movie/movieHot').then(response => {
-    //   if (response.statusText === 'OK') {
-    //     this.movieHot = response.data.data.data
-    //     // console.log(this.movieHot)
-    //   }
-    // }).catch(error => {
-    //   console.log(error)
-    // })
-    let url = `/movie/list.json?type=hot&offset=0&limit=1000`
-    // http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=1000
+    this.axios.get('/movie/movieHot').then(response => {
+      if (response.statusText === 'OK') {
+        this.movieHot = response.data.data.data
+        // console.log(this.movieHot)
+      }
+    }).catch(error => {
+      console.log(error)
+    })
+    /* let url = `/movie/list.json?type=hot&offset=0&limit=1000`
+    http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=1000
     this.axios.get(url).then(response => {
       if (response.statusText === 'OK') {
         this.movieHot = response.data.data.movies
@@ -44,11 +40,10 @@ export default {
       }
     }).catch(error => {
       console.log(error)
-    })
+    }) */
   },
   components: {
-    'movie-item': movieItem,
-    loading
+    'movie-item': movieItem
   }
 }
 </script>

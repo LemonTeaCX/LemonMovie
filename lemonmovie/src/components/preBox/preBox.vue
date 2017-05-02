@@ -62,6 +62,7 @@ export default {
     }
   }
   .play {
+    z-index: 10;
     position: absolute;
     right: 8px;
     bottom: 10px;

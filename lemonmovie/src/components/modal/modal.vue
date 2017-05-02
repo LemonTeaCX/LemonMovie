@@ -43,6 +43,7 @@ export default {
   transform: scale(1.2,1.2);
 }
 .modal {
+  z-index: 1000;
   position: fixed;
   left: 0;
   top: 0;

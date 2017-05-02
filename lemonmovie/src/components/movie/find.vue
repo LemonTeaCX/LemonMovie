@@ -19,8 +19,9 @@
           </li>
         </ul>
       </div>
-      <div class="prize">全球电影奖项<i class="iconfont">&#xe62d;</i></div>
+      <div class="prize" @click="wait">全球电影奖项<i class="iconfont">&#xe62d;</i></div>
     </div>
+    <modal v-if="isWait" :text="'敬请期待......'"></modal>
   </div>
 </template>
 
@@ -28,10 +29,12 @@
 import classlist from 'components/classlist/classlist'
 import boardBox from 'components/boardBox/boardBox'
 import festivalBox from 'components/festivalBox/festivalBox'
+import modal from 'components/modal/modal'
 export default {
   data() {
     return {
-      movieFind: {}
+      movieFind: {},
+      isWait: false
     }
   },
   created() {
@@ -47,7 +50,16 @@ export default {
   components: {
     classlist,
     boardBox,
-    festivalBox
+    festivalBox,
+    modal
+  },
+  methods: {
+    wait() {
+      this.isWait = true;
+      setTimeout(() => {
+        this.isWait = false;
+      }, 2000);
+    }
   }
 }
 </script>
