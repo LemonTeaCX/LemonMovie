@@ -52,6 +52,14 @@ apiRoutes.get('/discovery/discovery', function (req, res) {
   })
 })
 
+// user模块
+var user = require('../static/data/user/user.json');
+apiRoutes.get('/user/user', function (req, res) {
+  res.json({
+    data: user
+  })
+})
+
 app.use(apiRoutes);
 
 var compiler = webpack(webpackConfig)

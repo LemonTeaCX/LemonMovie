@@ -16,7 +16,7 @@
     </div>
     <div class="nav">
       <ul class="nav-tab">
-        <li class="nav-item">
+        <li class="nav-item" @click="loginFirst">
           <i class="iconfont like">&#xe605;</i>
           <span class="nav-item-text">想看</span>
         </li>
@@ -87,14 +87,44 @@
         </li>
       </ul>
     </div>
+    <modal v-if="showLoginFirst" :text="'请先登录......'"></modal>
   </div>
 </template>
 
 <script>
 import listitem from 'components/listitem/listitem'
+import modal from 'components/modal/modal'
 export default {
+  created() {
+    let isLogin = window.localStorage.getItem('isLogin')
+    if (isLogin === 'true') {
+      this.axios.get('/user/user').then(response => {
+        if (response.statusText === 'OK') {
+          this.userData = response.data.data.data.user
+          console.log(this.userData)
+        }
+      }).catch(error => {
+        console.log(error)
+      })
+    }
+  },
+  data() {
+    return {
+      userData: {},
+      showLoginFirst: false
+    }
+  },
   components: {
-    'list-item': listitem
+    'list-item': listitem,
+    modal
+  },
+  methods: {
+    loginFirst() {
+      this.showLoginFirst = true;
+      setTimeout(() => {
+        this.showLoginFirst = false;
+      }, 2000);
+    }
   }
 }
 </script>

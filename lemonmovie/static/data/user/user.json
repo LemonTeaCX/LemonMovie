@@ -1,0 +1,40 @@
+{
+  "data": {
+    "user": {
+      "authInfo": "",
+      "avatarType": 0,
+      "avatarurl": "",
+      "birthday": -2240553600000,
+      "city": {
+        "deleted": false,
+        "id": 20,
+        "nm": "广州",
+        "py": "guangzhou"
+      },
+      "currentExp": 45,
+      "gender": 0,
+      "id": 81332382,
+      "interest": "",
+      "juryLevel": 0,
+      "maoyanAge": "3",
+      "marriage": "",
+      "nextTitle": "",
+      "nickName": "cxjoker",
+      "occupation": "",
+      "registerTime": 1397055648000,
+      "roleType": 0,
+      "signature": "",
+      "ticketCount": 2,
+      "title": "青铜会员",
+      "topicCount": 0,
+      "totalExp": 130,
+      "uid": 0,
+      "userLevel": 1,
+      "userNextLevel": 2,
+      "username": "cxjoker",
+      "vipInfo": "",
+      "vipType": 0,
+      "visitorCount": 0
+    }
+  }
+}

@@ -7,21 +7,25 @@
       </div>
       <h1>Lemon Movie</h1>
       <div class="login-inputs">
-        <input class="name" placeholder="请输入账号" type="text">
-        <input class="pwd" placeholder="请输入密码" type="password">
+        <input class="name" placeholder="请输入账号" type="text" v-model="name">
+        <input class="pwd" placeholder="请输入密码" type="password" v-model="pwd">
       </div>
       <input class="login-button" type="button" value="登录" @click="login">
-      <modal v-if="isLogin" :text="'登录中......'"></modal>
+      <modal v-if="isShowModal" :text="modalText"></modal>
     </div>
   </transition>
 </template>
 
 <script>
 import modal from 'components/modal/modal'
+import router from '../../router'
 export default {
   data() {
     return {
-      isLogin: false
+      isShowModal: false,
+      name: '',
+      pwd: '',
+      modalText: ''
     }
   },
   methods: {
@@ -31,9 +35,30 @@ export default {
     },
     // 登录
     login() {
-      this.isLogin = true
+      if (this.name === '' || this.name === null) {
+        this.showModal('请输入账号...')
+        return
+      }
+      if (this.name !== '18819442175') {
+        this.showModal('账号有误，请重新输入...')
+        return
+      }
+      if (this.pwd !== '940217') {
+        this.showModal('密码有误，请重新输入...')
+        return
+      }
+      window.localStorage.setItem('isLogin', 'true')
+      this.showModal('登录中...', () => {
+        router.push('/user')
+      })
+    },
+    // 显示模态框
+    showModal(modalText, fn) {
+      this.modalText = modalText
+      this.isShowModal = true
       setTimeout(() => {
-        this.isLogin = false
+        this.isShowModal = false
+        fn && fn()
       }, 2000);
     }
   },
