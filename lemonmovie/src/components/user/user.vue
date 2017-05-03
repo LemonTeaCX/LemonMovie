@@ -101,7 +101,7 @@ export default {
       this.axios.get('/user/user').then(response => {
         if (response.statusText === 'OK') {
           this.userData = response.data.data.data.user
-          console.log(this.userData)
+          // console.log(this.userData)
         }
       }).catch(error => {
         console.log(error)
