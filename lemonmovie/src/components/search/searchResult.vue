@@ -8,12 +8,12 @@
       <div class="searchResult-hot-title">热门搜索</div>
       <div class="searchResult-hot-list">
         <ul>
-          <li class="searchResult-hot-item">这是第1个caw</li>
-          <li class="searchResult-hot-item">这是第2个cvdsvesv</li>
-          <li class="searchResult-hot-item">这是第3个</li>
-          <li class="searchResult-hot-item">这是第4个</li>
-          <li class="searchResult-hot-item">这是第5个vdsvds</li>
-          <li class="searchResult-hot-item">这是第6个</li>
+          <li class="searchResult-hot-item">春娇与志明</li>
+          <li class="searchResult-hot-item">超凡蜘蛛侠</li>
+          <li class="searchResult-hot-item">加勒比海盗</li>
+          <li class="searchResult-hot-item">冒险</li>
+          <li class="searchResult-hot-item">剧情</li>
+          <li class="searchResult-hot-item">盗梦空间</li>
         </ul>
       </div>
     </div>

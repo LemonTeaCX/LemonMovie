@@ -32,7 +32,7 @@
       <div class="detail-introduce-text" :class="showMoreIntroduce ? 'more' : ''">
         {{movieDetail.MovieDetailModel.dra.slice(3, movieDetail.MovieDetailModel.dra.length-4)}}
       </div>
-      <div class="detail-introduce-more" @click="showMore">多</div>
+      <div class="detail-introduce-more" @click="showMore">更多</div>
     </div>
     <div class="detail-hcmts" v-if="movieDetail.CommentResponseModel.hcmts">
       <div class="detail-hcmts-title">专业评论</div>
